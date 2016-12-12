@@ -1,0 +1,17 @@
+{
+  "name": "testanimations",
+  "version": "1.0.0",
+  "description": "testing some animations using greensock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Podworny",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.2"
+  }
+}
