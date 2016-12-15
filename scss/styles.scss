@@ -1,22 +1,48 @@
 @import "reset";
+@import url('https://fonts.googleapis.com/css?family=Cabin');
 
 body {
   display: flex;
   min-height: 100vh;
+  flex-direction: column;
+  background-color: #333;
+  color: #fff;
+  font-family: 'Cabin', sans-serif;
 }
 
 header {
-  height: 200px;
+  height: 100px;
   background-color: #181D20;
   width: 100%;
+  display: flex;
+  align-items: center;
+  .logo-wrapper {
+    margin-left: 15px;
+    .logo {
+      height: 75px;
+    }
+  }
 }
 
 main {
   flex: 1 0 auto;
 }
 
+.main-page {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 25px 50px;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}
+
 footer {
   background-color: #181D20;
-  min-height: 300px;
+  min-height: 225px;
   width: 100%;
 }
