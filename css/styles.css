@@ -46,6 +46,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   display: flex;
   min-height: 100vh;
@@ -53,6 +56,12 @@ body {
   background-color: #333;
   color: #fff;
   font-family: 'Cabin', sans-serif; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #999; }
 
 header {
   height: 100px;
@@ -66,12 +75,20 @@ header {
     display: flex; }
     header .logo-wrapper .logo {
       height: 75px; }
-  header nav {
-    width: 75%; }
+
+nav {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181D20; }
+  nav .nav-item {
+    padding: 25px; }
 
 main {
   flex: 1 0 auto;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
 
 .left-image-wrapper {
   background-position: 50% 0;
@@ -82,7 +99,8 @@ main {
 .main-page {
   background-color: #333;
   height: 100%;
-  width: 75%; }
+  width: 75%;
+  padding: 25px 0 0; }
   .main-page .text-wrapper {
     margin: 0 auto;
     max-width: 1024px;
@@ -90,7 +108,7 @@ main {
     .main-page .text-wrapper h1 {
       text-align: center;
       font-size: 32px;
-      margin-bottom: 20px; }
+      margin-bottom: 40px; }
     .main-page .text-wrapper h2 {
       font-size: 24px;
       margin-bottom: 10px; }
@@ -101,7 +119,14 @@ main {
 footer {
   background-color: #181D20;
   min-height: 225px;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
+  footer .logo-footer-wrapper {
+    position: absolute;
+    right: 10px;
+    bottom: 10px; }
+    footer .logo-footer-wrapper .logo-footer {
+      width: 25px; }
 
 @media only screen and (max-device-width: 768px) {
   .left-image-wrapper {

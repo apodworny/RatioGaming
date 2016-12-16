@@ -1,6 +1,10 @@
 @import "reset";
 @import url('https://fonts.googleapis.com/css?family=Cabin');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -8,6 +12,14 @@ body {
   background-color: #333;
   color: #fff;
   font-family: 'Cabin', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  &:hover, &:focus {
+    color: #999;
+  }
 }
 
 header {
@@ -24,14 +36,23 @@ header {
       height: 75px;
     }
   }
-  nav {
-    width: 75%;
+}
+
+nav {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #181D20;
+  .nav-item {
+    padding: 25px;
   }
 }
 
 main {
   flex: 1 0 auto;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .left-image-wrapper {
@@ -44,6 +65,7 @@ main {
   background-color: #333;
   height: 100%;
   width: 75%;
+  padding: 25px 0 0;
   .text-wrapper {
     margin: 0 auto;
     max-width: 1024px;
@@ -51,7 +73,7 @@ main {
     h1 {
       text-align: center;
       font-size: 32px;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
     h2 {
       font-size: 24px;
@@ -68,6 +90,15 @@ footer {
   background-color: #181D20;
   min-height: 225px;
   width: 100%;
+  position: relative;
+  .logo-footer-wrapper {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    .logo-footer {
+      width: 25px;
+    }
+  }
 }
 
 @media only screen and (max-device-width: 768px) {
